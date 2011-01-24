@@ -1,0 +1,319 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\fboxsep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Anthony Scopatz} & \textbf{Saturday, September 25, 2010} \\
+Enthought, Inc. & ascopatz@enthought.com \\
+The University of Texas at Austin & scopatz@mail.utexas.edu \\
+Austin, Texas, U.S.A. &  \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education \& Employment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+    \ressubheading{Enthought, Inc.}{Austin, TX}{Intern Developer}{May 2010 - present}
+    \begin{itemize}
+        \resitem{WIPP-PA: Waste Isolation Pilot Project Performance Assement tool for Sandia Nat'l Labs}
+        \resitem{EasyGuide2: Dental implant imaging software for Keystone Dental.}
+    \end{itemize}
+
+\item
+    \ressubheading{The University of Texas at Austin}{Austin, TX}{Ph.D. Mechanical Engineering, Nuclear and Radiation Engineering Program}{2008 - present}
+    \begin{itemize}
+        \resitem{Adviser: Erich A. Schneider}
+        \resitem{Cumulative GPA to date: 3.74}
+    \end{itemize}
+
+\item
+    \ressubheading{The University of Texas at Austin}{Austin, TX}{M.S.E. Mechanical Engineering, Nuclear and Radiation Engineering Program}{2006 - 2007}
+    \begin{itemize}
+        \resitem{Adviser: Erich A. Schneider}
+        \resitem{Thesis: Recyclable Uranium Options under the Global Nuclear Energy Partnership}
+    \end{itemize}
+
+\item
+    \ressubheading{University of California, Santa Barbara}{Santa Barbara, CA}{B.S. Physics}{2002 - 2006}
+    \begin{itemize}
+        \resitem{Graduated with a Major in Physics and a Minor in Mathematics}
+        \resitem{Graduated with 3.34 GPA}
+    \end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \vspace{-2pt}
+    \begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+        \multicolumn{2}{c}{Innovations in Fuel Cycle Research, 2nd place Systems Engineering and Analysis (\$2,500) \cftdotfill{\cftdotsep} 2010}\\
+        \multicolumn{2}{c}{Peer Reviewer for Nuclear Engineering \& Design (NED-D-09-00256) \cftdotfill{\cftdotsep} 2009}\\
+        \multicolumn{2}{c}{MCNPX Bug \#100 (\$20) \cftdotfill{\cftdotsep} 2009}\\
+        \multicolumn{2}{c}{Graduate Travel Award Fund (\$2,000) \cftdotfill{\cftdotsep} 2008}\\
+        \multicolumn{2}{c}{George J. Heuer, Jr. Ph.D. Endowed Graduate Fellowship Fund (\$2,500) \cftdotfill{\cftdotsep} 2007 - 2008}\\
+        \multicolumn{2}{c}{George J. Heuer, Jr. Ph.D. Endowed Graduate Fellowship Fund (\$2,500) \cftdotfill{\cftdotsep} 2006 - 2007}\\
+        \multicolumn{2}{c}{Undergraduate Research Scholarship (\$1,000) \cftdotfill{\cftdotsep} 2005} \\
+        \vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+    \ressubheading{Graduate Research Assistant}{The University of Texas at Austin}{Nuclear Fuel Cycle \& Reactor Modeling}{August 2006 - present}
+    \begin{itemize}
+        \resitem{Ongoing development of medium-fidelity reactor models and computational nuclear fuel cycle simulations.}
+        \resitem{Documentation of Indonesia and the nuclear fuel cycle (2006).}
+    \end{itemize}
+
+\item
+    \ressubheading{Summer Internship/Visiting Scientist}{Idaho National Laboratory}{Nuclear Fuel Cycle \& Reactor Modeling}{Summer 2007}
+    \begin{itemize}
+        \resitem{Modeled the use of recyclable uranium in light water reactors both with respect to the fuel cycle as a whole and to specific components, like the reactor and enrichment facilities.}
+    \end{itemize}
+
+\item
+    \ressubheading{Undergraduate Research Assistant}{University of California, Santa Barbara}{Terahertz Continuous Wave Spectroscopy}{2002 - 2005}
+    \begin{itemize}
+        \resitem{Looked at the effect of Terahertz waves on biomacromolecules in water.}
+    \end{itemize}
+
+\item
+    \ressubheading{Summer Internship/Visiting Scientist}{Los Alamos National Laboratory}{Terahertz Pump-Probe Spectroscopy}{Summer 2004}
+    \begin{itemize}
+        \resitem{Looked at the effect of Terahertz waves on Erbium-Arsenide on a Gallium-Arsenide substrate.}
+    \end{itemize}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Graduate Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+    Anthony Scopatz, Jun Lin, Man-Sung Yim, Erich Schneider; {\it ``Nuclear Fuel Cycle Sensitivity \& Contingency Table Analysis"}, In: Proc. American Nuclear Society: 2010 Annual Meeting, San Diego, California, June 2010.
+
+\item
+    Anthony Scopatz, Jun Lin, Man-Sung Yim, Erich Schneider; {\it ``Nuclear Fuel Cycle Sensitivity to the Variation of Physical Parameters"}, In: Proc. PHYSOR 2010 ­ Advances in Reactor Physics to Power the Nuclear Renaissance, Pittsburgh, Pennsylvania, May 2010.
+
+\item
+    Anthony M. Scopatz; {\it ``Elementary Fuel Cycle Parameter Contingency Analysis"}, In: Proc. American Nuclear Society Student Conference 2010, Ann Arbor, Michigan, April 2010.
+
+\item
+    Jun Li, Anthony Scopatz, Man-Sung Yim, Erich Schneider; {\it ``Impact of Reprocessing Separation Efficiency on Repository Capacity and Performance"}, In: Proc. Integrated Radioactive Waste Management in Future Fuel Cycles 2009, Charleston, South Carolina, November 2009.
+
+\item
+    Anthony Scopatz, Jun Li, Man-Sung Yim, Erich Schneider; {\it ``A Systemic Evaluation of the Sensitivity of Fuel Cycle Performance Metrics to Separation Efficiency Variation"}, In: Proc. Advanced Nuclear Fuel Cycles and Systems, GLOBAL 2009, Paris, France, September 2009.
+
+\item
+    Shropshire D.E., et al. {\it ``Advanced Fuel Cycle Economic Tools, Algorithms, and Methodologies and Methodologies"}. Idaho Falls, ID, USA; May 2009:412.
+
+\item
+    Anthony Scopatz; {\it ``Impact of Separation Efficiencies on Repository Peak Temperature Time"}, In: Proc. American Nuclear Society Student Conference, Gainesville, Florida, April 2009.
+
+\item
+    Scopatz, A.M., Schneider, E.A.; {\it ``A new method for rapid computation of transient fuel cycle material balances"}, Nucl. Eng. Des. (2009), doi:10.1016/j.nucengdes.2009.02.022.
+
+\item
+    Jun Li, Anthony Scopatz, Man-Sung Yim, Erich Schneider; {\it ``The sensitivity of fuel cycle performance to separation efficiency"}, Nucl. Eng. Des. (2009), doi:10.1016/j.nucengdes.2009.02.004.
+
+\item
+    Schneider, E.A., Scopatz, A.M.; {\it ``A parametrization of the neutronic characteristics of recyclable uranium"}, In: Proc. Intl. Conf. on the Physics of Reactors, PHYSOR 2008, Interlaken, Switzerland, September 2008.
+
+\item
+    Anthony M. Scopatz; {\it ``Effects of Neutronic Parametrization on Recyclable Uranium Fuel Cycles"}, In: Proc. American Nuclear Society Student Conference, College Station, Texas, March 2008.
+
+\item
+    Erich Schneider, Mark Deinert, Anthony Scopatz, David Shropshire; {\it ``Utilization Options for Recycled and Depleted Uranium in the United States"}, In: Proc. Advanced Nuclear Fuel Cycles and Systems, GLOBAL 2007, Boise, ID, September 2007.
+
+\item
+    R. K. Harrison, A. M. Scopatz, M. Ernesti; {\it ``A review of nuclear fuel cycle options for developing nations"}, In: Proc. Advanced Nuclear Fuel Cycles and Systems, GLOBAL 2007, Boise, ID, September 2007.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Undergraduate Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+    R.P. Prasankumar, A. Scopatz, D.J. Hilton, A.J. Taylor, R.D. Averitt, J.M. Zide, A.C. Gossard; {\it ``Carrier dynamics in self-assembled ErAs nanoislands embedded in GaAs measured by optical-pump terahertz-probe spectroscopy"}, Appl. Phys. Lett. 86 (20): Art. No. 201107 (2005).
+
+\item
+    Xu, J., Ramian, G.J., Galan, J.F., Savvidis, P.G., Scopatz, A.M., Birge, R.R., Allen, S.J. and Plaxco, K.W.; {\it ``Terahertz circular dichroism spectroscopy of biomolecules"}, In: aChemical and Biological Standoff Detection. J.O. Jensen and J-M. Theriault, Eds. Proceedings of the SPIE, Vol. 5268, pp 19-26 (2004).
+
+\item
+    Xu, J., Ramian, G.J., Galan, J.F., Savvidis, P.G., Scopatz, A.M., Birge, R.R. Allen, S.J. and Plaxco, K.W.; {\it ``Terahertz circular dichroism spectroscopy: a potential approach to unbiased, in situ life detection"}, Astrobiology, 3, 489-504 (2003). 
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Presentations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+    Anthony Scopatz; {\it ``Physics-Based Dynamic Nuclear Fuel Cycle Modeling \& Implications"}, Argonne National Laboratory, Chicago, Illinois, July 2010.
+
+\item
+    Anthony Scopatz; {\it ``Do Google, Bing, \& Yahoo Differ? Contingency Table Analysis on Search Engines"}, SciPy 2010, Austin, Texas, June 2010.
+
+\item
+    Anthony Scopatz, Jun Lin, Man-Sung Yim, Erich Schneider; {\it ``Nuclear Fuel Cycle Sensitivity \& Contingency Table Analysis"}, American Nuclear Society: 2010 Annual Meeting, San Diego, California, June 2010.
+
+\item
+    Anthony Scopatz, Jun Lin, Man-Sung Yim, Erich Schneider; {\it ``Nuclear Fuel Cycle Sensitivity to the Variation of Physical Parameters"}, PHYSOR 2010 ­ Advances in Reactor Physics to Power the Nuclear Renaissance, Pittsburgh, Pennsylvania, May 12, 2010.
+
+\item
+    Anthony M. Scopatz; {\it ``Elementary Fuel Cycle Parameter Contingency Analysis"}, American Nuclear Society Student Conference 2010, Ann Arbor, Michigan, April 9, 2010.
+
+\item
+    Anthony Scopatz, Jun Li, Man-Sung Yim, Erich Schneider; {\it ``The Sensitivity of Fuel Cycle Performance to Separation Efficiency"}, Thermal Fluid Systems - Nuclear \& Radiation Engineering Seminar Series, Department of Mechanical Engineering, The University of Texas at Austin, Austin, Texas, March 3, 2010.
+
+\item
+    Anthony Scopatz; {\it ``Advanced Python"},  Python Bootcamp 2010, The Hacker Within, \underline{http://hackerwithin.org/cgi-bin/hackerwithin.fcgi/wiki/PyBc/AdvancedPython}, The University of Wisconsin, Madison,  Wisconsin, January 14, 2010. 
+
+\item
+    Anthony Scopatz; {\it ``Using Scientific Python (SciPy)"},  Python Bootcamp 2010, The Hacker Within, \underline{http://hackerwithin.org/cgi-bin/hackerwithin.fcgi/wiki/PyBc/Session07}, The University of Wisconsin, Madison,  Wisconsin, January 13, 2010. 
+
+\item
+    Anthony Scopatz, Jun Li, Man-Sung Yim, Erich Schneider; {\it ``A Systemic Evaluation of the Sensitivity of Fuel Cycle Performance Metrics to Separation Efficiency Variation"}, GLOBAL 2009, Paris, France, September 8, 2009.
+
+\item
+    Anthony Scopatz; {\it ``Impact of Separation Efficiencies on Repository Peak Temperature Time"}, American Nuclear Society Student Conference, Gainesville, Florida, April 2009.
+
+\item
+    Anthony M. Scopatz; {\it ``Effects of Neutronic Parametrization on Recyclable Uranium Fuel Cycles"}, American Nuclear Society Student Conference, College Station, Texas, March 2008.
+
+\item
+    A. M. Scopatz, R. K. Harrison, M. Ernesti; {\it ``A Review of Nuclear Fuel Cycle Options for Developing Nations"}, GLOBAL 2007, Boise, Idaho, September 2007.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+    \ressubheading{Computational Methods in Nuclear Engineering}{The University of Texas at Austin}{Teaching Assistant/Grader}{Aug. 2010 - Dec. 2010}
+    \begin{itemize}
+        \resitem{Helped students develop and debug their discrete ordinates code throughout the course.}
+    \end{itemize}
+
+\item
+    \ressubheading{Astronomy 1}{University of California, Santa Barbara}{Undergraduate Teaching Assistant/Grader}{Sept. 2005 - Dec. 2005}
+    \begin{itemize}
+        \resitem{Graded a first year Astronomy course and provided teaching assistance when required.}
+    \end{itemize}
+
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Memberships}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+    \ressubheading{American Civil Liberties Union}{{\em 2008 - present}}{Member}{Texas Chapter}
+
+\item
+    \ressubheading{American Nuclear Society}{{\em 2006 - present}}{Student Member}{}
+
+\item
+    \ressubheading{Sierra Club}{{\em 2006 - present}}{Student Member}{Central Texas Chapter}
+
+\item
+    \ressubheading{The Hacker Within}{{\em 2009 - present}}{Member}{}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+    Programming Languages
+    \begin{itemize}
+        \resitem{{\bf Expert:} C/C++, Python, BASH}
+        \resitem{{\bf Intermediate:} Fortran 77/90/95, Java, Javascript, Lua, Ruby, Perl, Visual Basic, Powersim}
+    \end{itemize}
+
+\item
+    Markup Languages
+    \begin{itemize}
+        \resitem{{\bf Expert:} \LaTeX, HTML}
+        \resitem{{\bf Intermediate:} CSS, PHP}
+    \end{itemize}
+
+\item
+    Specialized Software
+    \begin{itemize}
+        \resitem{{\bf Expert:} Linux, Unix, OS/2, SSH, HDF5, Boost::Python, NumPy, SciPy, MatPlotLib, ORIGEN v2.2, MCNP5/X, Mathematica}
+        \resitem{{\bf Intermediate:} MATLAB, Maple, NJOY, gtk, Django, web2py, SQLite, MySQL}
+    \end{itemize}
+\end{itemize}
+
+\end{document}

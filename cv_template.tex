@@ -1,0 +1,254 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
+\usepackage{tocloft}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\fboxsep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Nathaniel Johnston} & \textbf{Monday, December 8, 2008} \\
+University of Guelph & njohns01@uoguelph.ca \\
+Guelph, Ontario, Canada & www.nathanieljohnston.com \\
+\end{tabular*}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{University of Guelph}{Guelph, ON}{Ph.D. Mathematics}{2008 - present}
+	\begin{itemize}
+		\resitem{Advisor: David W. Kribs}
+		\resitem{Relevant course: Matrix Analysis at University of Houston (Houston, TX)}
+	\end{itemize}
+
+\item
+	\ressubheading{University of Guelph}{Guelph, ON}{M.Sc. Mathematics}{2007 - 2008}
+	\begin{itemize}
+		\resitem{Advisors: John Holbrook and David W. Kribs}
+		\resitem{Thesis: Stabilized Distance Measures and Quantum Error Correction}
+		\resitem{Graduated with a 98.3\% average}
+		\resitem{Relevant courses: Operator Algebras at Fields Institute (Toronto, ON), Quantum Information Theory at University of Waterloo (Waterloo, ON)}
+	\end{itemize}
+
+\item
+	\ressubheading{University of Guelph}{Guelph, ON}{B.A.H. Mathematics}{2003 - 2007}
+	\begin{itemize}
+		\resitem{Graduated with a Major in Mathematics and a Minor in Statistics}
+		\resitem{Graduated with Honours, a 98.6\% cumulative average, and Dean's Honour List each year}
+		\resitem{Relevant courses: Functional Analysis, Operations Research, Quantum Error Correction}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\vspace{-2pt}
+	\begin{center}\begin{tabular*}{6.6in}{l@{\extracolsep{\fill}}r}
+		\multicolumn{2}{c}{NSERC Canada Graduate Scholarship (CGS D) (\$35 000) \cftdotfill{\cftdotsep} 2008 - 2010}\\
+		\multicolumn{2}{c}{Brock Doctoral Scholarship (\$30 000) \cftdotfill{\cftdotsep}2008 - 2010}\\
+		\multicolumn{2}{c}{Ontario Graduate Scholarship (OGS) (\$15 000, declined) \cftdotfill{\cftdotsep}2008}\\
+		\multicolumn{2}{c}{Mathematics Graduate Scholarship (\$500) \cftdotfill{\cftdotsep}2008}\\
+		\multicolumn{2}{c}{NSERC Canada Graduate Scholarship (CGS M) (\$17 500) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Ontario Graduate Scholarship (OGS) (\$15 000, declined) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Governor General's Academic Silver Medal \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Mathematics Graduation Prize (\$250) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{College of Physical and Engineering Sciences Graduation Prize (\$250) \cftdotfill{\cftdotsep} 2007}\\
+		\multicolumn{2}{c}{NSERC Undergraduate Student Research Award (\$5 625) \cftdotfill{\cftdotsep}2007}\\
+		\multicolumn{2}{c}{Class of 1970 Scholarship (\$1 400) \cftdotfill{\cftdotsep}2006}\\
+		\multicolumn{2}{c}{Moffat Mathematics \& Statistics Award (\$900) \cftdotfill{\cftdotsep}2006}\\
+		\multicolumn{2}{c}{NSERC Undergraduate Student Research Award (\$5 625) \cftdotfill{\cftdotsep}2006}\\
+		\multicolumn{2}{c}{Dean's Scholarship (\$1 000) \cftdotfill{\cftdotsep}2005}\\
+		\multicolumn{2}{c}{Moffat Mathematics \& Statistics Award (\$900) \cftdotfill{\cftdotsep}2005}\\
+		\multicolumn{2}{c}{Dean's Scholarship (\$1 000) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{Ted Newton Memorial Scholarship (\$1 500) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{WebCT Conferencing Prize (\$250) \cftdotfill{\cftdotsep}2004}\\
+		\multicolumn{2}{c}{Board of Governors' Scholarship (\$2 000) \cftdotfill{\cftdotsep}2003 - 2006}\\
+		\multicolumn{2}{c}{University of Guelph Entrance Scholarship (\$2 000) \cftdotfill{\cftdotsep} 2003} \\
+		\vphantom{E}
+\end{tabular*}
+\end{center}\vspace*{-16pt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Math Help Desk}{University of Guelph}{Graduate Teaching Assistant}{Sept. 2007 - Apr. 2008}
+	\begin{itemize}
+		\resitem{Provided one-on-one and group tutoring to students in first and second year math courses.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Set Theory}{University of Guelph}{Graduate Teaching Assistant}{Sept. 2007 - Dec. 2007}
+	\begin{itemize}
+		\resitem{Led twelve seminars guiding students through hard problems and reviewing course material.}
+		\resitem{Marked assignments for the course.}
+	\end{itemize}
+
+\item
+	\ressubheading{Math Help Desk}{University of Guelph}{Undergraduate Teaching Assistant}{Sept. 2006 - Apr. 2007}
+	\begin{itemize}
+		\resitem{Provided one-on-one and group tutoring to students in first and second year math courses.}
+	\end{itemize}
+
+\item 
+	\ressubheading{Set Theory}{University of Guelph}{Undergraduate Teaching Assistant}{Sept. 2006 - Dec. 2006}
+	\begin{itemize}
+		\resitem{Led six seminars guiding students through difficult problems and reviewing course material.}
+	\end{itemize}
+
+\item
+	\ressubheading{Math Help Desk}{University of Guelph}{Undergraduate Teaching Assistant}{Sept. 2005 - Apr. 2006}
+	\begin{itemize}
+		\resitem{Provided one-on-one and group tutoring to students in first and second year math courses.}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{NSERC Undergraduate Student Research Award}{University of Guelph}{Quantum Computing}{May 2007 - Aug. 2007}
+	\begin{itemize}
+		\resitem{Searched for new methods of quantum error correction.}
+		\resitem{Implemented an algorithm for estimating the completely bounded norm of linear maps.}
+	\end{itemize}
+
+\item
+	\ressubheading{NSERC Undergraduate Student Research Award}{University of Guelph}{Quantum Computing}{May 2006 - Aug. 2006}
+	\begin{itemize}
+		\resitem{Searched for new methods of quantum error correction.}
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications {\mdseries(available at www.nathanieljohnston.com/publications.asp)}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	Choi, M.-D., Johnston, N., and Kribs, D. W. (2008) {\it The Multiplicative Domain in Quantum Error Correction}. Journal of Physics A: Mathematical and Theoretical (submitted).
+
+\item
+	Johnston, N., Kribs, D. W., and Paulsen, V. (2007) {\it Computing Stabilized Norms for Quantum Operations via the Theory of Completely Bounded Maps}. Quantum Information \& Computation (to appear).
+
+\item
+	Johnston, N., Kribs, D. W., and Teng, C.-W. (2007) {\it Operator Algebraic Formulation of the Stabilizer Formalism for Quantum Error Correction}. Proceedings of the 2007 BIRS Workshop on Fractal Analysis, Wavelets, and Dynamical Systems, Springer Publications (to appear).
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Presentations {\mdseries(available at www.nathanieljohnston.com/presentations.asp)}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	Johnston, N. (December 2008) {\it The Multiplicative Domain in Quantum Error Correction}. Canadian Mathematical Society Winter 2008 Meeting -- Ottawa, Ontario.
+
+\item
+	Johnston, N. (July 2008) {\it The Multiplicative Domain in Quantum Error Correction}. Quantum Information \& Geometric Statistics Seminar (QuIGS) -- University of Guelph.
+
+\item
+	Johnston, N. (August 2007) {\it Completely Bounded Norms in Quantum Information}. Quantum Information \& Geometric Statistics Seminar (QuIGS) -- University of Guelph.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Memberships}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	\ressubheading{Central European Journal of Mathematics}{{\em Dec. 2008 - present}}{Language Editor}{}
+
+\item
+	\ressubheading{Canadian Mathematical Society Student Committee}{{\em Oct. 2008 - June 2010}}{Ontario Representative}{}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item
+	Markup Languages
+	\begin{itemize}
+		\resitem{{\bf Expert:} CSS, (X)HTML}
+		\resitem{{\bf Intermediate:} \LaTeX}
+	\end{itemize}
+
+\item
+	Programming Languages
+	\begin{itemize}
+		\resitem{{\bf Expert:} Classic ASP, Javascript, SQL, Visual Basic}
+		\resitem{{\bf Intermediate:} BASIC, C, Java, Python}
+	\end{itemize}
+
+\item
+	Specialized Software
+	\begin{itemize}
+		\resitem{{\bf Expert:} Maple, MATLAB}
+		\resitem{{\bf Intermediate:} S-Plus, SAS}
+	\end{itemize}
+\end{itemize}
+
+\end{document}

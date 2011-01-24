@@ -1,0 +1,5 @@
+*.log
+*.pdf
+*.dvi
+*.aux
+Source/
