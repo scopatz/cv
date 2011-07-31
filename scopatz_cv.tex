@@ -12,7 +12,7 @@
 \usepackage[svgnames]{xcolor}
 \usepackage{framed}
 \usepackage{tocloft}
-
+\usepackage{biblatex}
 
 %-----------------------------------------------------------
 %Edit these values as you see fit
@@ -56,6 +56,10 @@
 \end{tabular*}\vspace{-6pt}}
 %-----------------------------------------------------------
 
+
+% Bibliography
+\bibliography{publications}{}
+%\bibliographystyle{plain}
 
 \begin{document}
 
@@ -315,5 +319,7 @@ Austin, Texas, U.S.A. &  \\
         \resitem{{\bf Intermediate:} MATLAB, Maple, NJOY, gtk, Django, web2py, SQLite, MySQL}
     \end{itemize}
 \end{itemize}
+
+\fullcite{Scopatz2010i}
 
 \end{document}

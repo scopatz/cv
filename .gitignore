@@ -3,3 +3,7 @@
 *.dvi
 *.aux
 Source/
+*-blx.bib
+*.bbl
+*.blg
+*.xml
