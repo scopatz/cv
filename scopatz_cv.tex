@@ -69,21 +69,44 @@
   }\vspace{-5pt}
 }
 
-\newcommand{\ressubheading}[4]{
-%\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-%        \textbf{#1} & #2 \\
-%        \textit{#3} & \textit{#4} \\
-%\end{tabular*}\vspace{-6pt}}
-\begin{center}
-%\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftdotsep}}r}
-\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
-    \multicolumn{2}{c}{\textbf{#1} \cftdotfill{\cftdotsep} #2} \\
-    \multicolumn{2}{c}{\textit{#3} \cftdotfill{\cftdotsep} \textit{#4}} \\
-    \vphantom{E}
-\end{tabular*}
-\end{center}
-\vspace{-24pt}
+\newcommand{\ressubheadingshort}[3]{
+    \begin{center}
+    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+        \multicolumn{2}{c}{\textbf{#1} \cftdotfill{\cftdotsep} #2} \\
+        \textit{#3} & \\
+        \vphantom{E}
+    \end{tabular*}
+    \end{center}
+    \vspace{-24pt}
 }
+
+\newcommand{\ressubheading}[4]{
+    \begin{center}
+    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+        \multicolumn{2}{c}{\textbf{#1} \cftdotfill{\cftdotsep} #2} \\
+        \multicolumn{2}{c}{\textit{#3} \cftdotfill{\cftdotsep} \textit{#4}} \\
+        \vphantom{E}
+    \end{tabular*}
+    \end{center}
+    \vspace{-24pt}
+}
+
+\newcommand{\ressubheadingitems}[5]{
+    \begin{center}
+    \begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+        \multicolumn{2}{c}{\textbf{#1} \cftdotfill{\cftdotsep} #2} \\
+        \multicolumn{2}{c}{\textit{#3} \cftdotfill{\cftdotsep} \textit{#4}} \\
+        \vphantom{E}
+    \end{tabular*}
+    \end{center}
+    \vspace{-32pt}
+    \begin{itemize}\renewcommand{\labelitemi}{}
+        \item\begin{itemize}
+        #5
+        \end{itemize}
+    \end{itemize}
+}
+
 %-----------------------------------------------------------
 
 
@@ -104,70 +127,57 @@ University of Wisconsin-Madison & scopatz@gmail.com \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Education \& Employment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item
-    \ressubheading{CNERG, The University of Wisconsin-Madison}{Madison, WI}
-                  {Associate Scientist, Engineering Pysics Department}
-                  {June 2013 - present}
-    \begin{itemize}
-        \resitem{Cyclus: An agent-based, discrete time nuclear fuel cycle simulator.}
-        \resitem{PyNE: The Nuclear Engineering Toolkit.}
-    \end{itemize}
+\ressubheadingitems{CNERG, The University of Wisconsin-Madison}{Madison, WI}
+    {Associate Scientist, Engineering Pysics Department}
+    {June 2013 - present}{
+    \resitem{Cyclus: An agent-based, discrete time nuclear fuel cycle simulator.}
+    \resitem{PyNE: The Nuclear Engineering Toolkit.}
+}
 
-\item
-    \ressubheading{The FLASH Center, The University of Chicago}{Chicago, IL}
-                  {Research Scientist, Postdoctoral Scholar,  Astronomy 
-                   \& Astrophysics Dept.}
-                  {Nov 2011 - May 2013}
-    \begin{itemize}
-        \resitem{NIF: Simulation of magnetic field generation from neutral plasmas 
-                 using FLASH.}
-        \resitem{CosmoB: Simulation of magnetic field generation from neutral plasmas 
-                 using FLASH.}
-        \resitem{FLASH4: High-energy density physics capabilities and utilities.}
-        \resitem{Simulated Diagnostics: Schlieren, shadowgraphy, Langmuir probes, 
-                 etc from FLASH.}
-        \resitem{OpacPlot: HDF5-based equation of state and opacity file format.}
-    \end{itemize}
+\ressubheadingitems{The FLASH Center, The University of Chicago}{Chicago, IL}
+    {Research Scientist, Postdoctoral Scholar,  Astronomy \& Astrophysics Dept.}
+    {Nov 2011 - May 2013} {
+    \resitem{NIF: Simulation of magnetic field generation from neutral plasmas 
+             using FLASH.}
+    \resitem{CosmoB: Simulation of magnetic field generation from neutral plasmas 
+             using FLASH.}
+    \resitem{FLASH4: High-energy density physics capabilities and utilities.}
+    \resitem{Simulated Diagnostics: Schlieren, shadowgraphy, Langmuir probes, 
+             etc. from FLASH.}
+    \resitem{OpacPlot: HDF5-based equation of state and opacity file format.}
+}
 
-\item
-    \ressubheading{Enthought, Inc.}{Austin, TX}{Scientific Software Developer}
-                  {May 2010 - October 2011}
-    \begin{itemize}
-        \resitem{PlotTool: Time series data visualization for J.P. Morgan Chase.}
-        \resitem{PivotTable: Data cube configuration, management, and visualization 
-                 for J.P. Morgan Chase.}
-        \resitem{WIPP-PA: Waste Isolation Pilot Project Performance Assessment tool 
-                 for Sandia Nat'l Labs.}
-        \resitem{EasyGuide2: Dental implant imaging software for Keystone Dental.}
-    \end{itemize}
+\ressubheadingitems{Enthought, Inc.}{Austin, TX}{Scientific Software Developer}
+    {May 2010 - October 2011}{
+    \resitem{PlotTool: Time series data visualization for J.P. Morgan Chase.}
+    \resitem{PivotTable: Data cube configuration, management, and visualization 
+             for J.P. Morgan Chase.}
+    \resitem{WIPP-PA: Waste Isolation Pilot Project Performance Assessment tool 
+             for Sandia Nat'l Labs.}
+    \resitem{EasyGuide2: Dental implant imaging software for Keystone Dental.}
+}
 
-\item
-    \ressubheading{The University of Texas at Austin}{Austin, TX}{Ph.D. Mechanical 
-                   Engineering, Nuclear and Radiation Engineering Program}{2008 - 2011}
-    \begin{itemize}
-        \resitem{Adviser: Erich A. Schneider}
-        \resitem{Dissertation: Essential Physics for Fuel Cycle Modeling \& Analysis}
-        \resitem{Graduated with 3.74 GPA}
-    \end{itemize}
+\ressubheadingitems{The University of Texas at Austin}{Austin, TX}
+    {Ph.D. Mechanical Engineering, Nuclear and Radiation Engineering Program}
+    {2008 - 2011}{
+    \resitem{Adviser: Erich A. Schneider}
+    \resitem{Dissertation: Essential Physics for Fuel Cycle Modeling \& Analysis}
+    \resitem{Graduated with 3.74 GPA}
+}
 
-\item
-    \ressubheading{The University of Texas at Austin}{Austin, TX}{M.S.E. Mechanical 
-                   Engineering, Nuclear and Radiation Engineering Program}{2006 - 2007}
-    \begin{itemize}
-        \resitem{Adviser: Erich A. Schneider}
-        \resitem{Thesis: Recyclable Uranium Options under the Global Nuclear Energy 
-                 Partnership}
-    \end{itemize}
+\ressubheadingitems{The University of Texas at Austin}{Austin, TX}
+    {M.S.E. Mechanical Engineering, Nuclear and Radiation Engineering Program}
+    {2006 - 2007}{
+    \resitem{Adviser: Erich A. Schneider}
+    \resitem{Thesis: Recyclable Uranium Options under the Global Nuclear Energy 
+             Partnership}
+}
 
-\item
-    \ressubheading{University of California, Santa Barbara}{Santa Barbara, CA}
-                  {B.S. Physics}{2002 - 2006}
-    \begin{itemize}
-        \resitem{Graduated with a Major in Physics and a Minor in Mathematics}
-        \resitem{Graduated with 3.34 GPA}
-    \end{itemize}
-\end{itemize}
+\ressubheadingitems{University of California, Santa Barbara}{Santa Barbara, CA}
+    {B.S. Physics}{2002 - 2006}{
+    \resitem{Graduated with a Major in Physics and a Minor in Mathematics}
+    \resitem{Graduated with 3.34 GPA}
+}
 
 \clearpage
 
@@ -624,29 +634,22 @@ University of Wisconsin-Madison & scopatz@gmail.com \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Memberships}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-\item
-    \ressubheading{American Nuclear Society}{{\em 2006 - present}}{Member}{}
+\ressubheadingshort{American Nuclear Society}{{\em 2006 - present}}{Member}
 
-\item
-    \ressubheading{NumFOCUS}{{\em 2011 - 2014}}{Board Member, Treasurer}{}
+\ressubheadingshort{Python Software Foundation}{{\em 2013 - present}}{Fellow}
 
-\item
-    \ressubheading{The Hacker Within}{{\em 2009 - present}}{Member}{}
+\ressubheadingshort{NumFOCUS}{{\em 2011 - 2014}}{Board Member, Treasurer}
 
-\item
-    \ressubheading{inSCIght: The Scientific Computing Podcast}{{\em 2011 - 2013}}{Host \& Blogger}{}
+\ressubheadingshort{Software Carpentry}{{\em 2011 - present}}{Instructor}
 
-\item
-    \ressubheading{Software Carpentry}{{\em 2011 - present}}{Instructor}{}
+\ressubheadingshort{The Hacker Within}{{\em 2009 - present}}{Member}
 
-\item
-    \ressubheading{American Physical Society}{{\em 2012 - present}}{Member}{}
+\ressubheadingshort{inSCIght: The Scientific Computing Podcast}{{\em 2011 - 2013}}
+                   {Host \& Blogger}
+    
+\ressubheadingshort{American Physical Society}{{\em 2012 - 2013}}{Member}
 
-\item
-    \ressubheading{Python Software Foundation}{{\em 2013 - present}}{Fellow}{}
-
-\end{itemize}
+%\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Skills}
